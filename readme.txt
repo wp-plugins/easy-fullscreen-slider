@@ -17,7 +17,7 @@ After activation you must change the disable option and add images.
 This plugin uses jQuery library [Supersized](http://buildinternet.com/project/supersized/ "Supersized webpage").   
 
 = Options =
-**Transition effect**
+**Transition effect:**
     * 'none' - No transition effect
     * 'fade' - Fade effect
     * 'slideTop' - Slide in from top
@@ -27,19 +27,19 @@ This plugin uses jQuery library [Supersized](http://buildinternet.com/project/su
     * 'carouselRight' - Carousel from right to left
     * 'carouselLeft' - Carousel from left to right
     
-**Transition speed**
+**Transition speed:**
     * Speed of transitions in milliseconds.
-**Slide interval**
+**Slide interval:**
     * Time between slide changes in milliseconds.
-**Controlls**
+**Controlls:**
     * Show arrows navigation
-**Autoplay**
+**Autoplay:**
     * Determines whether slideshow begins playing when page is loaded.
-**Disable**
+**Disable:**
     * Off slider.
-**Progress bar**
+**Progress bar:**
     * Show progress bar.
-**Thumbnail navigation**
+**Thumbnail navigation:**
     * Show thmubnails.
 
 == Installation ==
