@@ -18,14 +18,15 @@ This plugin uses jQuery library [Supersized](http://buildinternet.com/project/su
 
 = Options =
 **Transition effect:**
-    * 'none' - No transition effect
-    * 'fade' - Fade effect
-    * 'slideTop' - Slide in from top
-    * 'slideRight' - Slide in from right
-    * 'slideBottom' - Slide in from bottom
-    * 'slideLeft' - Slide in from left
-    * 'carouselRight' - Carousel from right to left
-    * 'carouselLeft' - Carousel from left to right
+
+    'none' - No transition effect
+    'fade' - Fade effect
+    'slideTop' - Slide in from top
+    'slideRight' - Slide in from right
+    'slideBottom' - Slide in from bottom
+    'slideLeft' - Slide in from left
+    'carouselRight' - Carousel from right to left
+    'carouselLeft' - Carousel from left to right
     
 **Transition speed:**
     * Speed of transitions in milliseconds.
