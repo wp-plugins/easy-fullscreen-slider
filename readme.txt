@@ -29,19 +29,32 @@ This plugin uses jQuery library [Supersized](http://buildinternet.com/project/su
     'carouselLeft' - Carousel from left to right
     
 **Transition speed:**
-    * Speed of transitions in milliseconds.
+
+    Speed of transitions in milliseconds.
+
 **Slide interval:**
-    * Time between slide changes in milliseconds.
+
+    Time between slide changes in milliseconds.
+
 **Controlls:**
-    * Show arrows navigation
+
+    Show arrows navigation
+
 **Autoplay:**
-    * Determines whether slideshow begins playing when page is loaded.
+
+    Determines whether slideshow begins playing when page is loaded.
+
 **Disable:**
-    * Off slider.
+
+    Off slider.
+
 **Progress bar:**
-    * Show progress bar.
+
+    Show progress bar.
+
 **Thumbnail navigation:**
-    * Show thmubnails.
+
+    Show thmubnails.
 
 == Installation ==
 
