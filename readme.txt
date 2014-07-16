@@ -8,6 +8,8 @@ Stable tag: 1.0
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
+An easy-to-use WordPress fullscreen slider plugin for Supersized.
+
 == Description ==
 Easy Fullscreen Slider allows you to add background fullscreen slider or single fullscreen image. You can set default settings for all posts/pages or set individually settings for each page/post. 
 After activation you must change the disable option and add images.
