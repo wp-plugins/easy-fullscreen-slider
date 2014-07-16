@@ -1,0 +1,29 @@
+#images img 
+{
+    width:100px;
+    height:100px;
+    float:left;
+}
+#images .timg
+{
+    width:100px;
+    height:100px;
+    float:left;
+    margin-left:5px;
+    margin-right:5px;
+}
+#images .dlink
+{
+    margin-top:-100px;
+    float:right;
+    width:20px;
+    height:20px;
+    background: #fff url(../img/delete.png);
+    cursor:pointer;
+    opacity:0.5;
+}
+#uploadbutton
+{
+    vertical-align: middle;
+}
+.rdesc{font-size:9px;font-weight:normal;}
