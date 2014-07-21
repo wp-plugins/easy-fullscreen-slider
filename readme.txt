@@ -2,9 +2,9 @@
 Contributors: Sarven
 Donate link: 
 Tags: background, fullscreen, supersized, slideshow, slider
-Requires at least: 3.6 or higher
+Requires at least: 3.6
 Tested up to: 3.9.1
-Stable tag: 1.0
+Stable tag: 1.1
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -75,10 +75,16 @@ There are currently no FAQs at this time.
 
 == Changelog ==
 
+= 1.1 =
+* Added reorder photos.
+
 = 1.0 =
 * First version of the plugin.
 
 == Upgrade Notice ==
+
+= 1.1 =
+* Added reorder photos.
 
 = 1.0 =
 * First version of the plugin.

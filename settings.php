@@ -34,6 +34,7 @@ if(!class_exists('EasyFullscreenSliderSettings')){
                 wp_enqueue_script('media-upload');
                 wp_enqueue_script('thickbox');
             }
+            wp_enqueue_script('jquery-ui-sortable');
             wp_register_script('efslideradmin', plugins_url('assets/js/efslideradmin.js', __FILE__), array('jquery', 'media-upload', 'thickbox'));
             wp_enqueue_script('efslideradmin');
             wp_register_style( 'efslideradmin', plugins_url('assets/css/efslideradmin.css', __FILE__));

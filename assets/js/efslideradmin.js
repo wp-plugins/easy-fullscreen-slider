@@ -24,3 +24,9 @@ jQuery('#upload_images').click(function(e){
 jQuery('#images').on('click', '.dlink', function(){
     jQuery('#img'+this.id).remove();
 });
+jQuery(function(){
+    jQuery('#images').sortable({
+            placeholder: 'ui-state-highlight'
+        });
+        jQuery('#images').disableSelection();
+});
