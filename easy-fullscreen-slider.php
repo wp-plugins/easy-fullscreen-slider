@@ -60,17 +60,23 @@ if(!class_exists('EasyFullscreenSlider')){
         */
         public function activate(){
             //add default settings
-            update_option('efs-settings', array(
-                'transition_effect' => 1,
-                'controlls' => 0,
-                'autoplay' => 1,
-                'disable' => 1,
-                'transition_speed' => 750,
-                'slide_interval' => 5000,
-                'progress_bar' => 0,
-                'thumbnail_navigation' => 0
-            ));
-            update_option('efs-images', array());
+            $default_values = get_option('efs-settings');
+            $default_images = get_option('efs-images');
+            if(!isset($default_values)){ 
+                update_option('efs-settings', array(
+                    'transition_effect' => 1,
+                    'controlls' => 0,
+                    'autoplay' => 1,
+                    'disable' => 1,
+                    'transition_speed' => 750,
+                    'slide_interval' => 5000,
+                    'progress_bar' => 0,
+                    'thumbnail_navigation' => 0
+                ));
+            }
+            if(!isset($default_images)){
+                update_option('efs-images', array());
+            }
         }
         /**
         * Deactivate the plugin
@@ -94,18 +100,18 @@ if(!class_exists('EasyFullscreenSlider')){
             $values = get_post_meta(get_the_ID(), 'efslider', true);
             $default_values = get_option('efs-settings');
             $default_images = get_option('efs-images');
-            
+            echo count($values['images']);
             if($values){
                 $this->settings = array(
-                    'transition_effect' => (!$values['transition_effect']) ? $default_values['transition_effect'] : $values['transition_effect'],
-                    'transition_speed' => (is_numeric($values['transition_speed']) || !$values['transition_speed']) ? $values['transition_speed'] : $default_values['transition_speed'],
-                    'controlls' => (!$values['controlls']) ? $default_values['controlls'] : $values['controlls'],
-                    'autoplay' => (!$values['autoplay']) ? $default_values['autoplay'] : $values['autoplay'],
-                    'disable' => (!$values['disable']) ? $default_values['disable'] : $values['disable'],
-                    'images' => (!$values['images']) ? $default_images : $values['images'],
-                    'slide_interval' => ($values['slide_interval']) ? $values['slide_interval'] : $default_values['slide_interval'],
-                    'progress_bar' => (!$values['progress_bar']) ? $default_values['progress_bar'] : $values['progress_bar'],
-                    'thumbnail_navigation' => (!$values['thumbnail_navigation']) ? $default_values['thumbnail_navigation'] : $values['thumbnail_navigation']
+                    'transition_effect' => (isset($values['transition_effect'])) ? $values['transition_effect'] : $default_values['transition_effect'],
+                    'transition_speed' => (is_numeric($values['transition_speed']) || isset($values['transition_speed'])) ? $values['transition_speed'] : $default_values['transition_speed'],
+                    'controlls' => (isset($values['controlls'])) ? $values['controlls'] : $default_values['controlls'],
+                    'autoplay' => (isset($values['autoplay'])) ? $values['autoplay'] : $default_values['autoplay'],
+                    'disable' => (isset($values['disable'])) ? $values['disable'] : $default_values['disable'],
+                    'images' => (isset($values['images']) && count($values['images'])>0) ? $values['images'] : $default_images,
+                    'slide_interval' => (isset($values['slide_interval'])) ? $values['slide_interval'] : $default_values['slide_interval'],
+                    'progress_bar' => (isset($values['progress_bar'])) ? $values['progress_bar'] : $default_values['progress_bar'],
+                    'thumbnail_navigation' => (isset($values['thumbnail_navigation'])) ? $values['thumbnail_navigation'] : $default_values['thumbnail_navigation']
                 );
             }
             else{
