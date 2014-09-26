@@ -3,7 +3,7 @@
  * Plugin Name: Easy Fullscreen Slider
  * Plugin URI: 
  * Description: 
- * Version: 1.1
+ * Version: 1.1.1
  * Author: Kamil Ruchała
  * Author URI: 
  * License: GPL2
