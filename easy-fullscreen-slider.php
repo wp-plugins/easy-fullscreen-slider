@@ -100,7 +100,7 @@ if(!class_exists('EasyFullscreenSlider')){
             $values = get_post_meta(get_the_ID(), 'efslider', true);
             $default_values = get_option('efs-settings');
             $default_images = get_option('efs-images');
-            echo count($values['images']);
+            
             if($values){
                 $this->settings = array(
                     'transition_effect' => (isset($values['transition_effect'])) ? $values['transition_effect'] : $default_values['transition_effect'],

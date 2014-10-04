@@ -75,6 +75,9 @@ There are currently no FAQs at this time.
 
 == Changelog ==
 
+= 1.1.2 =
+* Small bug fix.
+
 = 1.1.1 =
 * Disable option fix.
 
@@ -85,6 +88,9 @@ There are currently no FAQs at this time.
 * First version of the plugin.
 
 == Upgrade Notice ==
+
+= 1.1.2 =
+* Small bug fix.
 
 = 1.1.1 =
 * Disable option fix.
