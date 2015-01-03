@@ -2,13 +2,15 @@
 if(!class_exists('EasyFullscreenSliderPostSettings')){
     class EasyFullscreenSliderPostSettings
     {
+        private $plugins_url;
         /**
         * Construct the settings object
         */
         public function __construct(){
             // register actions
             add_action('add_meta_boxes', array(&$this, 'efs_register_meta_box'));
-            add_action('save_post', array(&$this, 'efs_save_post'));//TO DO
+            add_action('save_post', array(&$this, 'efs_save_post'));
+            $this->plugins_url = plugins_url();
         }
        
         /**
@@ -31,11 +33,12 @@ if(!class_exists('EasyFullscreenSliderPostSettings')){
                 $values['disable'] = $default_values['disable'];
                 $values['transition_speed'] = $default_values['transition_speed'];
                 $values['slide_interval'] = $default_values['slide_interval'];
-                $values['images'] = '';
+                $values['slides'] = '';
                 $values['progress_bar'] = $default_values['progress_bar'];
                 $values['thumbnail_navigation'] = $default_values['thumbnail_navigation'];
+                $values['background_pattern'] = $default_values['background_pattern'];
             }
-            
+            $values['bg_pattern_filename'] = basename($values['background_pattern']);
             //efslider scripts
             wp_register_script('efslideradmin', plugins_url('assets/js/efslideradmin.js', __FILE__), array('jquery', 'media-upload', 'thickbox'));
             wp_enqueue_script('efslideradmin');
@@ -46,18 +49,21 @@ if(!class_exists('EasyFullscreenSliderPostSettings')){
         }
         public function efs_save_post($post_id = false, $post = false){
             //update meta post values
-            $values = array(
-                'transition_effect' => $_POST['transition_effect'],
-                'controlls' => $_POST['controlls'],
-                'autoplay' => $_POST['autoplay'],
-                'disable' => $_POST['disable'],
-                'transition_speed' => $_POST['transition_speed'],
-                'images' => $_POST['efs-images'],
-                'slide_interval' => $_POST['slide_interval'],
-                'progress_bar' => $_POST['progress_bar'],
-                'thumbnail_navigation' => $_POST['thumbnail_navigation']
-                );
-            update_post_meta( $post_id, 'efslider', $values);
+            if($_POST){
+                $values = array(
+                    'transition_effect' => $_POST['transition_effect'],
+                    'controlls' => $_POST['controlls'],
+                    'autoplay' => $_POST['autoplay'],
+                    'disable' => $_POST['disable'],
+                    'transition_speed' => $_POST['transition_speed'],
+                    'slides' => $_POST['efs-slides'],
+                    'slide_interval' => $_POST['slide_interval'],
+                    'progress_bar' => $_POST['progress_bar'],
+                    'thumbnail_navigation' => $_POST['thumbnail_navigation'],
+                    'background_pattern' => $_POST['background_pattern'],
+                    );
+                update_post_meta( $post_id, 'efslider', $values);
+            }
         }
     }
 }

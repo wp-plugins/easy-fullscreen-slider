@@ -2,17 +2,20 @@
 if(!class_exists('EasyFullscreenSliderSettings')){
     class EasyFullscreenSliderSettings
     {
+        
+        private $plugins_url;
         /**
         * Construct the settings object
         */
         public function __construct(){
             // register actions
+            $this->plugins_url = plugins_url();
             add_action('admin_init', array(&$this, 'admin_init'));
             add_action('admin_menu', array(&$this, 'add_menu'));
         }
         public function admin_init(){
             register_setting('efs-settings-group', 'efs-settings');
-            register_setting('efs-settings-group', 'efs-images');
+            register_setting('efs-settings-group', 'efs-slides');
         } 
         /**
         * Creating page menu item
@@ -40,7 +43,8 @@ if(!class_exists('EasyFullscreenSliderSettings')){
             wp_register_style( 'efslideradmin', plugins_url('assets/css/efslideradmin.css', __FILE__));
             wp_enqueue_style('efslideradmin');
             $values = get_option('efs-settings');
-            $images = get_option('efs-images');
+            $values['bg_pattern_filename'] = basename($values['background_pattern']);
+            $slides = get_option('efs-slides');
             
             require_once(plugin_dir_path( __FILE__ ).'templates/settings_page.php');
         }

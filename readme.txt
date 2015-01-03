@@ -3,8 +3,8 @@ Contributors: Sarven
 Donate link: 
 Tags: background, fullscreen, supersized, slideshow, slider
 Requires at least: 3.6
-Tested up to: 4.0
-Stable tag: 1.1.2
+Tested up to: 4.1
+Stable tag: 2.0
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -57,6 +57,10 @@ This plugin uses jQuery library [Supersized](http://buildinternet.com/project/su
 
     Show thmubnails
 
+**Background pattern:**
+
+    Add background pattern
+
 == Installation ==
 
 1. Upload `easy-fullscreen-slider.php` to the `/wp-content/plugins/` directory
@@ -75,6 +79,16 @@ There are currently no FAQs at this time.
 
 == Changelog ==
 
+= 2.0 =
+* Fix for blog page
+* Added link and text for slides
+* Added background patterns
+* Added optimization for single background
+* Fix for uninstall option
+
+= 1.2 =
+* Fix for blog page.
+
 = 1.1.2 =
 * Small bug fix.
 
@@ -88,6 +102,16 @@ There are currently no FAQs at this time.
 * First version of the plugin.
 
 == Upgrade Notice ==
+
+= 2.0 =
+* Fix for blog page
+* Added link and text for slides
+* Added background patterns
+* Added optimization for single background
+* Fix for uninstall option
+
+= 1.2 =
+* Fix for blog page.
 
 = 1.1.2 =
 * Small bug fix.
