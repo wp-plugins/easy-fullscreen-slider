@@ -4,7 +4,7 @@
  * Plugin URI: 
  * Description: Easy Fullscreen Slider allows you to add background fullscreen slider or single fullscreen image. You can set default settings for all posts/pages or set individually settings for each page/post. 
 After activation you must change the disable option and add images.
- * Version: 2.0.1
+ * Version: 2.0.2
  * Author: Kamil Ruchała
  * Author URI: 
  * License: GPL2
@@ -219,10 +219,10 @@ if(!class_exists('EasyFullscreenSlider')){
                 wp_register_script('supersized', plugins_url('assets/js/supersized.3.2.7.min.js', __FILE__), array('jquery'));
                 wp_enqueue_script('supersized');
 
-                wp_register_style( 'supersized', plugins_url('assets/css/supersized.css', __FILE__));
+                wp_register_style( 'supersized', plugins_url('assets/css/supersized.css', __FILE__), array(), '2.0.1');
                 wp_enqueue_style('supersized');
                 if($this->multiple_bg){
-                    wp_register_style( 'supersizedshutter', plugins_url('assets/css/supersized.shutter.css', __FILE__));
+                    wp_register_style( 'supersizedshutter', plugins_url('assets/css/supersized.shutter.css', __FILE__), array(), '2.0.1');
                     wp_enqueue_style('supersizedshutter');
 
                     //wp_register_script('sfslider', plugins_url('assets/js/sfslider.js', __FILE__), array('supersized'));
@@ -360,6 +360,8 @@ if(class_exists('EasyFullscreenSlider')){
     register_activation_hook(__FILE__, array('EasyFullscreenSlider', 'activate'));
     register_deactivation_hook(__FILE__, array('EasyFullscreenSlider', 'deactivate'));
     register_uninstall_hook(__FILE__, array('EasyFullscreenSlider', 'uninstall'));
+    
+    add_action('upgrader_process_complete', array('EasyFullscreenSlider', 'activate'));
 
     $EasySlider = new EasyFullscreenSlider();
 }

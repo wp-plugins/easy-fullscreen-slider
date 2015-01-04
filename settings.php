@@ -38,9 +38,9 @@ if(!class_exists('EasyFullscreenSliderSettings')){
                 wp_enqueue_script('thickbox');
             }
             wp_enqueue_script('jquery-ui-sortable');
-            wp_register_script('efslideradmin', plugins_url('assets/js/efslideradmin.js', __FILE__), array('jquery', 'media-upload', 'thickbox'));
+            wp_register_script('efslideradmin', plugins_url('assets/js/efslideradmin.js', __FILE__), array('jquery', 'media-upload', 'thickbox'), '2.0.1');
             wp_enqueue_script('efslideradmin');
-            wp_register_style( 'efslideradmin', plugins_url('assets/css/efslideradmin.css', __FILE__));
+            wp_register_style( 'efslideradmin', plugins_url('assets/css/efslideradmin.css', __FILE__), array(), '2.0.1');
             wp_enqueue_style('efslideradmin');
             $values = get_option('efs-settings');
             $values['bg_pattern_filename'] = basename($values['background_pattern']);
