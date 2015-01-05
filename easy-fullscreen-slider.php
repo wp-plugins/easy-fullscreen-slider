@@ -4,7 +4,7 @@
  * Plugin URI: 
  * Description: Easy Fullscreen Slider allows you to add background fullscreen slider or single fullscreen image. You can set default settings for all posts/pages or set individually settings for each page/post. 
 After activation you must change the disable option and add images.
- * Version: 2.0.2
+ * Version: 2.0.3
  * Author: Kamil Ruchała
  * Author URI: 
  * License: GPL2
