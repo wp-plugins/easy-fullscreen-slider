@@ -4,7 +4,7 @@
  * Plugin URI: 
  * Description: Easy Fullscreen Slider allows you to add background fullscreen slider or single fullscreen image. You can set default settings for all posts/pages or set individually settings for each page/post. 
 After activation you must change the disable option and add images.
- * Version: 2.0.3
+ * Version: 2.0.4
  * Author: Kamil Ruchała
  * Author URI: 
  * License: GPL2
@@ -96,7 +96,7 @@ if(!class_exists('EasyFullscreenSlider')){
                 $default_values['background_pattern'] = 'none';
                 update_option('efs-settings', $default_values);
             }
-            if(empty($default_slides)){
+            if(!isset($default_slides)){
                 update_option('efs-slides', array());
             }
             // convert images to slides
